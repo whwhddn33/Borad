@@ -9,25 +9,21 @@
 <script>
 	function signCheck(){
 		const joinform = document.joinform;
-/* 		var id = document.getElementById('sign_userid');
-		var pw = document.getElementById('sign_password');
-		var pwCheck = document.getElementById('sign_password_ck');
-		var name = document.getElementById('sign_name');
-		var phoneNum = document.getElementById('sign_phone_num'); */
-	if(joinform.sign_userid <8){
-		document.alert("아이디를 8자 이상으로 설정해주세요");
+	if(joinform.id.value.length <8){
+		alert("아이디를 8자 이상으로 설정해주세요");
+		joinform.id.focus();
 		return false;
-	}else if(pw != pwCheck){
+	}
+	if(password.value != password_ck.value){
 		alert("비밀번호와 비밀번호확인이 다릅니다. 다시 확인해주세요");
 		return false;
-	}else if(phoneNum<10){
+	}
+	if(phone_num.value<10){
 		alert("휴대폰번호를 확인해주세요");
 		return false;
 	}
 	joinform.submit();
 }
-	if (signCheck() == true) alert("회원가입 성공"); 
-	else  alert("회원가입 실패");
 </script>
 
 </head>
@@ -84,7 +80,7 @@
                                     <form name = "joinform" action="" method="post">
                                         <div class = "int-a">
                                             <input type = "text" name = "id" id = "sign_id">
-                                            <label for="id">STUDENT NUMBER</label>
+                                            <label for="id">STUDENT ID</label>
                                         </div> 
                                        
                                         <div class = "int-a">
