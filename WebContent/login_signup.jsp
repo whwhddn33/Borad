@@ -5,8 +5,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+	function signCheck(){
+		const joinform = document.joinform;
+/* 		var id = document.getElementById('sign_userid');
+		var pw = document.getElementById('sign_password');
+		var pwCheck = document.getElementById('sign_password_ck');
+		var name = document.getElementById('sign_name');
+		var phoneNum = document.getElementById('sign_phone_num'); */
+	if(joinform.sign_userid <8){
+		document.alert("아이디를 8자 이상으로 설정해주세요");
+		return false;
+	}else if(pw != pwCheck){
+		alert("비밀번호와 비밀번호확인이 다릅니다. 다시 확인해주세요");
+		return false;
+	}else if(phoneNum<10){
+		alert("휴대폰번호를 확인해주세요");
+		return false;
+	}
+	joinform.submit();
+}
+	if (signCheck() == true) alert("회원가입 성공"); 
+	else  alert("회원가입 실패");
+</script>
+
 </head>
 <body>
+
 	<div class = slidepage>
                 
                 <input type="radio" name = "trans" id= "move2page">
@@ -53,35 +79,32 @@
                                 </div>
                                 <div class = "signupbox">
                                     <h1>SIGN UP</h1>
-                                    <form action="membersave.jsp" method="post">
+                                    
+                                    <!-- -----------------------signupform--------- -->
+                                    <form name = "joinform" action="" method="post">
                                         <div class = "int-a">
-                                            <input type = "text" name = "id" id = "id"
-                                            autocomplete="off" required>
+                                            <input type = "text" name = "id" id = "sign_id">
                                             <label for="id">STUDENT NUMBER</label>
                                         </div> 
+                                       
                                         <div class = "int-a">
-                                            <input type="password" name= "password" id = "password"
-                                            autocomplete = "off" required>
+                                            <input type="password" name= "password" id = "sign_password">
                                             <label for="password">PASSWORD</label>
                                         </div> 
                                         <div class = "int-a">
-                                            <input type="password" name= "password_ck" id = "password_ck"
-                                            autocomplete = "off" required>
+                                            <input type="password" name= "password_ck" id = "sign_password_ck">
                                             <label for="password_ck">PASSWORD CHECK</label>
                                         </div>
                                         <div class = "int-a">
-                                            <input type = "text" name = "name" id = "name"
-                                            autocomplete="off" required>
+                                            <input type = "text" name = "name" id = "sign_name">
                                             <label for="name">NAME</label>
                                         </div> 
                                         <div class = "int-a">
-                                            <input type = "text" name = "phone_num" id = "phone_num"
-                                            autocomplete="off" required >
+                                            <input type = "text" name = "phone_num" id = "sign_phone_num">
                                             <label for="phone_num">PHONE NUMBER</label>
                                         </div> 
                                         <div class="btn-area">
-                                            <button id ="btn" 
-                                            type="submit">SUBMIT</button>
+                                            <button id ="btn" onclick="signCheck();">SUBMIT</button>
                                         </div>
                                         
                                     </form>
@@ -90,4 +113,8 @@
                     </div>
             </div>
 </body>
+
+                                        
+
+
 </html>
