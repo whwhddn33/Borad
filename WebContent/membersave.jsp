@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>가입완료</title>
 </head>
+<script>
+		alert("회원가입 완료!");
+</script>
 <body>
-	ㅎㅇ
 </body>
+
+
+
 </html>
