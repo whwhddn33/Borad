@@ -11,30 +11,16 @@
                 
                 <input type="radio" name = "trans" id= "move2page">
                 <input type="radio" name = "trans" id= "move1page"checked>
-                
-                
-
-
-
-
 
                     <div class = slider>
-                        
-                        
 
                         <div class = slide1>
 
-
                             <div class =slide1in-1>
-
-
-
 
                                 <div class = label1hw>
                                     <label for="move2page"><img id ="signupimg" src="signupimg.png" alt=""></label>
                                 </div>   
-
-
 
                                 <div class = "loginbox">
                                     <h1> LOGIN </h1>
@@ -55,34 +41,16 @@
                                         </div>
                                     </form>
                                 </div>
-
-
                             </div>
-
-                                
                         </div>
-
-
-
-
-
-
-
 
 
 
                         <div class = slide2>
                             <div class =slide2in>
-                            
-
-
                                 <div class = label2hw>
                                 <label for="move1page"><img id ="loginimg" src="loginimg.png" alt=""></label>
                                 </div>
-
-
-                                
-
                                 <div class = "signupbox">
                                     <h1>SIGN UP</h1>
                                     <form action="membersave.jsp" method="post">
@@ -96,7 +64,6 @@
                                             autocomplete = "off" required>
                                             <label for="password">PASSWORD</label>
                                         </div> 
-                                        
                                         <div class = "int-a">
                                             <input type="password" name= "password_ck" id = "password_ck"
                                             autocomplete = "off" required>
@@ -112,15 +79,13 @@
                                             autocomplete="off" required >
                                             <label for="phone_num">PHONE NUMBER</label>
                                         </div> 
-                                        
                                         <div class="btn-area">
                                             <button id ="btn" 
                                             type="submit">SUBMIT</button>
                                         </div>
+                                        
                                     </form>
                                 </div>
-
-
                         </div>    
                     </div>
             </div>
