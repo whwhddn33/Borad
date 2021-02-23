@@ -77,16 +77,15 @@
                                             <label for="name">NAME</label>
                                         </div> 
                                         <div class = "int-a">
-                                            <input type = "text" name = "phone_num" id = "sign_phone_num">
+                                            <input type = "text" name = "phone_num" id = "sign_phone_num1">
                                             <label for="phone_num">PHONE NUMBER</label>
                                         </div> 
                                         <div class="btn-area">
-                                            <input type="button" id ="btn" onclick="signCheck();">
-                                            <!-- <button id ="btn" onclick="signCheck();">SUBMIT</button> -->
+                                            <input type="button" id ="btn" onclick="signCheck();" value = "Submit">
                                         </div>
                                     </form>
                                     <!-- -----------------------signupform----------------- -->
-                                </div>오  
+                                </div>
                         </div>
                     </div>
             </div>
@@ -95,22 +94,32 @@
 <script>
 	function signCheck(){
 		const joinform = document.joinform;
-	if(joinform.id.value.length <8){
-		alert("아이디를 8자 이상으로 설정해주세요");
+		var id = joinform.id.value;
+		var pw = joinform.password.value;
+		var pwcheck = joinform.password_ck.value;
+		var name = joinform.name.value;
+		var phoneNum = joinform.phone_num.value;
+		
+		
+		
+	if(id == null){
+		alert("아이디를 입력해주세요");
 		joinform.id.focus();
 		return false;
-	}
-	if(joinform.password.value != joinform.password_ck.value){
+	}else if(pw != pwcheck){
 		alert("비밀번호와 비밀번호확인이 다릅니다. 다시 확인해주세요");
 		return false;
-	} 
-	if(joinform.phone_num.value<10){
+	}else if(pw.length < 6){
+		alert("6자리 이상 비밀번호를 입력해주세요");
+		return false;
+	}else if(name.length ==1 || name.length>6){
+		alert("이름을 정확히 입력해주세요.");
+		return false;
+	}else if(phoneNum.length!=11){
 		alert("휴대폰번호를 확인해주세요");
 		return false;
-	}
-	joinform.submit();
+	}else joinform.submit();
 }
-
 </script>
 
 
