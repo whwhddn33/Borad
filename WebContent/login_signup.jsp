@@ -6,25 +6,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<script>
-	function signCheck(){
-		const joinform = document.joinform;
-	if(joinform.id.value.length <8){
-		alert("아이디를 8자 이상으로 설정해주세요");
-		joinform.id.focus();
-		return false;
-	}
-	if(password.value != password_ck.value){
-		alert("비밀번호와 비밀번호확인이 다릅니다. 다시 확인해주세요");
-		return false;
-	}
-	if(phone_num.value<10){
-		alert("휴대폰번호를 확인해주세요");
-		return false;
-	}
-	joinform.submit();
-}
-</script>
 
 </head>
 <body>
@@ -50,7 +31,7 @@
                                         <div class = "logint-area">
                                             <input type="text" name= "id" id = "id"
                                             autocomplete = "off" required>
-                                            <label for="id">STUDENT NUMBER</label>
+                                            <label for="id">STUDENT ID</label>
                                         </div>
                                         <div class = "logint-area">
                                             <input type="password" name= "password" id = "password"
@@ -76,8 +57,8 @@
                                 <div class = "signupbox">
                                     <h1>SIGN UP</h1>
                                     
-                                    <!-- -----------------------signupform--------- -->
-                                    <form name = "joinform" action="" method="post">
+                                    <!-- -----------------------signupform--------------------- -->
+                                    <form name = "joinform" action="membersave.jsp" method="post">
                                         <div class = "int-a">
                                             <input type = "text" name = "id" id = "sign_id">
                                             <label for="id">STUDENT ID</label>
@@ -100,17 +81,37 @@
                                             <label for="phone_num">PHONE NUMBER</label>
                                         </div> 
                                         <div class="btn-area">
-                                            <button id ="btn" onclick="signCheck();">SUBMIT</button>
+                                            <input type="button" id ="btn" onclick="signCheck();">
+                                            <!-- <button id ="btn" onclick="signCheck();">SUBMIT</button> -->
                                         </div>
-                                        
                                     </form>
-                                </div>
-                        </div>    
+                                    <!-- -----------------------signupform----------------- -->
+                                </div>오  
+                        </div>
                     </div>
             </div>
 </body>
 
-                                        
+<script>
+	function signCheck(){
+		const joinform = document.joinform;
+	if(joinform.id.value.length <8){
+		alert("아이디를 8자 이상으로 설정해주세요");
+		joinform.id.focus();
+		return false;
+	}
+	if(joinform.password.value != joinform.password_ck.value){
+		alert("비밀번호와 비밀번호확인이 다릅니다. 다시 확인해주세요");
+		return false;
+	} 
+	if(joinform.phone_num.value<10){
+		alert("휴대폰번호를 확인해주세요");
+		return false;
+	}
+	joinform.submit();
+}
+
+</script>
 
 
 </html>
