@@ -13,12 +13,16 @@ public class UserDAO {
 	SqlSessionFactory sqlfactory = SqlMapConfig.getSqlFactory();
 	
 	public UserDAO() {
-		sqlsession = sqlfactory.openSession(true);
+		sqlsession = sqlfactory.openSession(true);//true => 오토커밋
 	}
 	
 	
-	public boolean join(UserDTO user) {
-		return 1==sqlsession.insert("User.join",user);
+	public void join(UserDTO user) {
+		sqlsession.insert("User.join",user);
+	}
+	
+	public void idCheck(UserDTO userid) {
+		sqlsession.selectOne("UserDTO.getUserid");
 	}
 //	public boolean login(String userid,String userpw) {
 //	}

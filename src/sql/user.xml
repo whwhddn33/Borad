@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace = "User">
+
+	<insert id="join" parameterType="userdto">
+		
+	</insert>
+	
+	<select id="join" parameterType="userdto.getUserid">
+		select * from board where userid = #{userid}
+	</select>
+	
+	<select id = "login" parameterType="hashmap" resultType = "_int">
+		select count(*) from board where userid = #{userid} and userpw = #{userpw}
+	</select>
+
+</mapper>

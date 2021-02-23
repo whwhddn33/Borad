@@ -6,7 +6,7 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias type="com.koreait.dto.UserDTO" alias = "userdto"/>
+		<typeAlias type="dto.UserDTO" alias = "userdto"/>
 	</typeAliases>
 
 
