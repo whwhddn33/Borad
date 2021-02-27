@@ -9,7 +9,7 @@
 		
 	</insert>
 	
-	<select id="join" parameterType="userdto.getUserid">
+	<select id="IdCheck" parameterType="userdto.getUserid" resultType="_int">
 		select * from board where userid = #{userid}
 	</select>
 	

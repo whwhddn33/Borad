@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-
 </head>
 <body>
 
@@ -60,24 +59,24 @@
                                     <!-- -----------------------signupform--------------------- -->
                                     <form name = "joinform" action="membersave.jsp" method="post">
                                         <div class = "int-a">
-                                            <input type = "text" name = "id" id = "sign_id">
+                                            <input type = "text" name = "userid" id = "sign_id">
                                             <label for="id">STUDENT ID</label>
                                         </div> 
                                        
                                         <div class = "int-a">
-                                            <input type="password" name= "password" id = "sign_password">
+                                            <input type="password" name= "userpw" id = "sign_password">
                                             <label for="password">PASSWORD</label>
                                         </div> 
                                         <div class = "int-a">
-                                            <input type="password" name= "password_ck" id = "sign_password_ck">
+                                            <input type="password" name= "userpwCheck" id = "sign_password_ck">
                                             <label for="password_ck">PASSWORD CHECK</label>
                                         </div>
                                         <div class = "int-a">
-                                            <input type = "text" name = "name" id = "sign_name">
+                                            <input type = "text" name = "username" id = "sign_name">
                                             <label for="name">NAME</label>
                                         </div> 
                                         <div class = "int-a">
-                                            <input type = "text" name = "phone_num" id = "sign_phone_num1">
+                                            <input type = "text" name = "userphone" id = "sign_phone_num1">
                                             <label for="phone_num">PHONE NUMBER</label>
                                         </div> 
                                         <div class="btn-area">
@@ -91,36 +90,6 @@
             </div>
 </body>
 
-<script>
-	function signCheck(){
-		const joinform = document.joinform;
-		var id = joinform.id.value;
-		var pw = joinform.password.value;
-		var pwcheck = joinform.password_ck.value;
-		var name = joinform.name.value;
-		var phoneNum = joinform.phone_num.value;
-		
-		
-		
-	if(id == null){
-		alert("아이디를 입력해주세요");
-		joinform.id.focus();
-		return false;
-	}else if(pw != pwcheck){
-		alert("비밀번호와 비밀번호확인이 다릅니다. 다시 확인해주세요");
-		return false;
-	}else if(pw.length < 6){
-		alert("6자리 이상 비밀번호를 입력해주세요");
-		return false;
-	}else if(name.length ==1 || name.length>6){
-		alert("이름을 정확히 입력해주세요.");
-		return false;
-	}else if(phoneNum.length!=11){
-		alert("휴대폰번호를 확인해주세요");
-		return false;
-	}else joinform.submit();
-}
-</script>
-
+<script src="<%=request.getContextPath()%>/app/login_signup.js"></script>
 
 </html>
