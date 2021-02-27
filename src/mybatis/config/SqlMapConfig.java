@@ -12,7 +12,7 @@ public class SqlMapConfig {
 	
 	static {
 		try {
-			String resource = "./com/koreait/mybatis/config/config.xml";
+			String resource = "/mybatis/config/config.xml";
 			Reader reader = Resources.getResourceAsReader(resource);
 			sqlFactory = new SqlSessionFactoryBuilder().build(reader);
 		} catch (IOException e) {

@@ -6,7 +6,7 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias type="dto.UserDTO" alias = "userdto"/>
+		<typeAlias type="app.dao.UserBean" alias = "userBean"/>
 	</typeAliases>
 
 

@@ -57,7 +57,7 @@
                                     <h1>SIGN UP</h1>
                                     
                                     <!-- -----------------------signupform--------------------- -->
-                                    <form name = "joinform" action="membersave.jsp" method="post">
+                                    <form name = "joinform" action="/userController/UserJoinCheck.User" method="post">
                                         <div class = "int-a">
                                             <input type = "text" name = "userid" id = "sign_id">
                                             <label for="id">STUDENT ID</label>
@@ -80,7 +80,7 @@
                                             <label for="phone_num">PHONE NUMBER</label>
                                         </div> 
                                         <div class="btn-area">
-                                            <input type="button" id ="btn" onclick="signCheck();" value = "Submit">
+                                            <input type="button" id ="btn" onclick="signCheck();" value = "Signup">
                                         </div>
                                     </form>
                                     <!-- -----------------------signupform----------------- -->
@@ -90,6 +90,6 @@
             </div>
 </body>
 
-<script src="<%=request.getContextPath()%>/app/login_signup.js"></script>
+<script src="<%=request.getContextPath()%>/app/js/login_signup.js"></script>
 
 </html>

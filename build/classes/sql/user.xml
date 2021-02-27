@@ -5,11 +5,13 @@
   
 <mapper namespace = "User">
 
-	<insert id="join" parameterType="userdto">
-		
+	<insert id="join" parameterType="userBean">
+		INSERT INTO BOARDUSER
+		(USERID, USERPW, USERNAME, USERPHONE)
+		VALUES(#{userid}, #{userpw}, #{username}, #{userphone})
 	</insert>
 	
-	<select id="IdCheck" parameterType="userdto.getUserid" resultType="_int">
+	<select id="IdCheck" parameterType="userBean" resultType="_int">
 		select * from board where userid = #{userid}
 	</select>
 	
