@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8" http-equiv="Content-Type" content = "text/html">
 <title>Insert title here</title>
-
+<link rel = "stylesheet" href="/app/css/loginsignup.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
                             <div class =slide1in-1>
 
                                 <div class = label1hw>
-                                    <label for="move2page"><img id ="signupimg" src="signupimg.png" alt=""></label>
+                                    <label for="move2page"><img id ="signupimg" src="/app/login_signupimages/signupimg.png" alt=""></label>
                                 </div>   
 
                                 <div class = "loginbox">
@@ -51,7 +51,7 @@
                         <div class = slide2>
                             <div class =slide2in>
                                 <div class = label2hw>
-                                <label for="move1page"><img id ="loginimg" src="loginimg.png" alt=""></label>
+                                <label for="move1page"><img id ="loginimg" src="/app/login_signupimages/loginimg.png" alt=""></label>
                                 </div>
                                 <div class = "signupbox">
                                     <h1>SIGN UP</h1>
@@ -81,7 +81,7 @@
                                             <label for="phone_num">PHONE NUMBER</label>
                                         </div> 
                                         <div class="btn-area">
-                                            <input type="button" id ="btn" onclick="signCheck();" value = "Signup">
+                                        	<button id = btn type="button" onclick="signCheck();" value = "Signup">SUBMIT</button>
                                         </div>
                                     </form>
                                     <!-- -----------------------signupform----------------- -->

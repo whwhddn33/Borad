@@ -1,0 +1,515 @@
+*{margin:0;padding:0;}
+body
+{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    background-color: rgb(249, 217, 255);
+}
+.slidepage
+{
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    background-color: rgb(164, 166, 255);
+    ;
+
+}
+
+.slidepage{
+    height: 100%;
+    width: 200%;
+    transition: 1s;
+}
+
+
+/*****************************************************************************/
+.slider
+{
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+
+
+
+
+
+
+/*****************************************************************************/
+.slide1
+{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background:url(/app/login_signupimages/loginbg1.png);
+    background-size: cover;
+
+}
+
+
+
+
+/*****************************************************************************/
+.slide1in-1
+{
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    justify-content: flex-end;
+    align-items: center;
+}
+.label1hw
+{
+    position: absolute;
+}
+
+.slide1>label
+{
+
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
+
+
+/*****************************************************************************/
+.loginbox
+{
+    background-color: rgb(255, 255, 255);
+    box-shadow:0px 0px 10px 0.1em rgb(41, 41, 41);
+    width: 24vw;
+    height: 15vw;
+    margin-right: 10vw;
+}
+
+.loginbox h1
+{
+    font-size: 2vw; color:rgb(0, 0, 0); /*로그인로고*/
+    font-family: 'Noto Sans KR', sans-serif,bold; /*로고 폰트*/
+    margin-left: 8.5vw;
+
+    margin-bottom: 1.5vw;
+}
+
+.logint-area
+{
+    position: relative ;/*입력란크기*/
+    padding-left: 2vw;
+    padding-bottom: 1vw;
+    height: 2.1vw;
+}
+
+.logint-area>input{
+    width: 20vw; /*넓이*/
+
+    padding: 18px 0px 8px; /*입력란 페딩*/
+    background-color: transparent; /*입력란 배경(투명)*/
+    border: none; /*선 없음*/
+    border-bottom: 1px solid rgba(112, 70, 160, 0.521);/*선 아래 색상 두께*/
+    font-size: 1vw; color: rgb(176, 126, 255); /*입력란 폰트*/
+    outline: none; /*외곽선 없음*/
+  }
+
+  .logint-area>label{  /*입력란속 폰트*/
+    position: absolute; left: 1vw; top: 1vw;
+    font-size: 1vw; color: rgba(0, 0, 0, 0.5);
+    padding-left: 1vw;
+    transition: top .5s ease;
+  }
+  .logint-area input:focus + label, /*입력란 폰트 움직임*/
+.logint-area input:valid + label { /*입력란 폰트 설정*/
+    top: 0;
+    font-size: 1vw; color: #58309938;
+}
+
+.logbtn-area {/*로그인 입력창 버튼 사이 마진*/
+  margin-top: 10px;
+  padding-left: 1vw;}
+  .logbtn-area>button { /*버튼 넓이 높이 색상 폰트*/
+    margin-left: 1vw;
+    width:20vw; height: 2vw;
+    background: rgba(196, 124, 
+    245, 0.705);
+    font-size: 1vw; color: rgb(250, 239, 255);
+    font-family: 'Noto Sans KR', sans-serif, bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px)
+
+{
+    .slide1in-1
+    {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .label1hw
+    {
+    }
+    .slide1>label
+    {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+    }
+    .loginbox
+  {
+    background-color: rgb(255, 255, 255);
+    box-shadow:0px 0px 10px 0.1em rgb(41, 41, 41);
+    width: 390px;
+    height: 290px;
+    margin-right: 80px;
+
+  }
+
+  .loginbox h1{
+    font-size: 40px; color:rgb(0, 0, 0); /*로그인로고*/
+    font-family: 'Noto Sans KR', sans-serif,bold; /*로고 폰트*/
+    margin-left: 125px;
+    margin-bottom: 30px;
+  }
+
+  .logint-area
+  {
+    position: relative ;/*입력란크기*/
+    padding-left: 30px;
+    padding-bottom: 40px;
+    height: 20px;
+  }
+  .logint-area input{
+    width: 330px; /*넓이*/
+    padding: 10px 0px 8px; /*입력란 페딩*/
+    background-color: transparent; /*입력란 배경(투명)*/
+    border: none; /*선 없음*/
+    border-bottom: 1px solid rgba(112, 70, 160, 0.521);/*선 아래 색상 두께*/
+    font-size: 20px; color: rgb(255, 126, 126); /*입력란 폰트*/
+    outline: none; /*외곽선 없음*/
+  }
+
+  .logint-area label
+  {  /*입력란속 폰트*/
+    position: absolute; left: 20px; top: 10px;
+    font-size: 20px; color: rgba(0, 0, 0, .5);
+    padding-left: 1vw;
+    transition: top .5s ease;
+  }
+
+  .logint-area input:focus + label, /*입력란 폰트 움직임*/
+  .logint-area input:valid + label { /*입력란 폰트 설정*/
+      top: -13px;
+      font-size: 20px; color: #58309938;
+  }
+
+  .logbtn-area {/*로그인 입력창 버튼 사이 마진*/
+    margin-top: 10px;
+    padding-left: 7px;}
+    .logbtn-area button { /*버튼 넓이 높이 색상 폰트*/
+      margin-left: 22px;
+      width:330px; height: 30px;
+      background: rgba(196, 124, 245, 0.705);
+      font-size: 20px; color: rgb(250, 239, 255);
+      font-family: 'Noto Sans KR', sans-serif, bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+/*****************************************************************************/
+.slide2
+{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background:url(/app/login_signupimages/signupbg1.png);
+    background-size: cover;
+}
+
+
+
+/*****************************************************************************/
+.slide2in
+{
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+}
+.label2hw
+{
+}
+.slide2>label
+{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*****************************************************************************/
+
+.signupbox
+{
+
+    background-color: rgb(255, 255, 255);
+    box-shadow:0px 0px 10px 0.1em rgb(41, 41, 41);
+    width: 24vw;
+    height: 27vw;
+    margin-right: 10vw;
+}
+
+.signupbox h1{
+    font-size: 2vw; color:rgb(0, 0, 0); /*로그인로고*/
+    font-family: 'Noto Sans KR', sans-serif,bold; /*로고 폰트*/
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+    margin-bottom: 1.5vw;
+}
+
+.int-a
+{
+    position: relative ;/*입력란크기*/
+    padding-left: 2vw;
+    padding-bottom: 1vw;
+    height: 2.1vw;
+}
+.int-a input{
+    width: 20vw; /*넓이*/
+
+    padding: 25px 0px 8px; /*입력란 페딩*/
+    background-color: transparent; /*입력란 배경(투명)*/
+    border: none; /*선 없음*/
+    border-bottom: 1px solid rgba(112, 70, 160, 0.521);/*선 아래 색상 두께*/
+    font-size: 1vw; color: rgb(176, 126, 255); /*입력란 폰트*/
+    outline: none; /*외곽선 없음*/
+}
+
+.int-a label{  /*입력란속 폰트*/
+    position: absolute; left: 1vw; top: 1vw;
+    font-size: 1vw; color: rgba(0, 0, 0, 0.5);
+    padding-left: 1vw;
+    transition: top .5s ease;
+}
+
+.int-a input:focus + label, /*입력란 폰트 움직임*/
+.int-a input:valid + label { /*입력란 폰트 설정*/
+    top: 0;
+    font-size: 1vw; color: #58309938;
+}
+
+.btn-area {/*로그인 입력창 버튼 사이 마진*/
+  margin-top: 30px;
+  padding-left: 1vw;}
+  .btn-area button { /*버튼 넓이 높이 색상 폰트*/
+    margin-left: 1vw;
+    width:20vw; height: 2vw;
+    background: rgba(196, 124, 245, 0.705);
+    font-size: 1vw; color: rgb(250, 239, 255);
+    font-family: 'Noto Sans KR', sans-serif, bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px)
+{
+
+    .slide2in
+{
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+}
+.label2hw
+{
+}
+.slide2>label
+{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
+  .signupbox
+{
+  background-color: rgb(255, 255, 255);
+  box-shadow:0px 0px 10px 0.1em rgb(41, 41, 41);
+  width: 390px;
+  height: 450px;
+  margin-right: 90px;
+
+}
+
+.signupbox h1{
+  font-size: 40px; color:rgb(0, 0, 0); /*로그인로고*/
+  font-family: 'Noto Sans KR', sans-serif,bold; /*로고 폰트*/
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+
+.int-a
+{
+  position: relative ;/*입력란크기*/
+  padding-left: 30px;
+  padding-bottom: 40px;
+  height: 20px;
+
+
+
+}
+.int-a input{
+  width: 330px; /*넓이*/
+
+  padding: 10px 0px 8px; /*입력란 페딩*/
+  background-color: transparent; /*입력란 배경(투명)*/
+  border: none; /*선 없음*/
+  border-bottom: 1px solid rgba(112, 70, 160, 0.521);/*선 아래 색상 두께*/
+  font-size: 20px; color: rgb(255, 126, 126); /*입력란 폰트*/
+  outline: none; /*외곽선 없음*/
+}
+
+.int-a label{  /*입력란속 폰트*/
+  position: absolute; left: 20px; top: 10px;
+  font-size: 20px; color: rgba(0, 0, 0, .5);
+  padding-left: 1vw;
+  transition: top .5s ease;
+}
+
+.int-a input:focus + label, /*입력란 폰트 움직임*/
+.int-a input:valid + label { /*입력란 폰트 설정*/
+    top: -13px;
+    font-size: 20px; color: #58309938;
+}
+
+.btn-area {/*로그인 입력창 버튼 사이 마진*/
+  margin-top: 10px;
+  padding-left: 7px;}
+  .btn-area button { /*버튼 넓이 높이 색상 폰트*/
+    margin-left: 22px;
+    width:330px; height: 30px;
+    background: rgba(196, 124, 245, 0.705);
+    font-size: 20px; color: rgb(250, 239, 255);
+    font-family: 'Noto Sans KR', sans-serif, bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************************************************/
+.slidepage >input
+{
+    display: none;
+}
+
+
+#move1page:checked~.slider{margin-left: 0;}
+#move2page:checked~.slider{margin-left: -50%;}
+
+#loginimg
+{
+  width: 10vw;
+  min-width: 95px;
+}
+#signupimg
+{
+  width:10vw;
+  min-width: 95px;
+}
+
+
+
+
+/**{margin:0;padding:0;}
+ul,li{list-style:none;}
+.body{height:50vh;position:relative;overflow:hidden;}
+.slide ul{width:400%;height:100%;transition:1s;}
+.slide ul:after{content:"";display:block;clear:both;}
+.slide li{float:left;width:25%;height:100%;}
+.slide li:nth-child(1){background:#faa;}
+.slide li:nth-child(2){background:#ffa;}
+.slide input
+{
+    display:none;
+}
+#pos1 #pos2
+{
+    display: flex;
+    vertical-align:middle;
+    width:300px;
+    height:10px;
+    transition:0.3s;
+    border-radius:50%;
+    cursor:pointer;
+    position: absolute;
+}
+
+
+
+#pos1:checked~ul{margin-left:0%;}
+#pos2:checked~ul{margin-left:-100%;}
+*/
