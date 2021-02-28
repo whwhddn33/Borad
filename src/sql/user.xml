@@ -11,8 +11,8 @@
 		VALUES(#{userid}, #{userpw}, #{username}, #{userphone})
 	</insert>
 	
-	<select id="IdCheck" parameterType="userBean" resultType="_int">
-		select * from board where userid = #{userid}
+	<select id="checkId" parameterType="string" resultType="_int">
+		select count(*) from boarduser where userid = #{userid}
 	</select>
 	
 	<select id = "login" parameterType="hashmap" resultType = "_int">

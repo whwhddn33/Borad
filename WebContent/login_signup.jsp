@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" http-equiv="Content-Type" content = "text/html">
 <title>Insert title here</title>
 
 </head>
@@ -58,9 +58,10 @@
                                     
                                     <!-- -----------------------signupform--------------------- -->
                                     <form name = "joinform" action="/userController/UserJoinCheck.User" method="post">
-                                        <div class = "int-a">
-                                            <input type = "text" name = "userid" id = "sign_id">
-                                            <label for="id">STUDENT ID</label>
+                                        <div class = "int-a" >
+                                            <input type = "text"  name = "userid" id = "sign_id"  oninput="checkId();">
+                                            <label for="id">STUDENT ID<span id = checkText style ="color: red"> <!-- <button type="button" onclick="checkId()"> 중복체크</button> --></span></label>
+                                            
                                         </div> 
                                        
                                         <div class = "int-a">
@@ -88,6 +89,7 @@
                         </div>
                     </div>
             </div>
+</div>
 </body>
 
 <script src="<%=request.getContextPath()%>/app/js/login_signup.js"></script>

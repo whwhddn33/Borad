@@ -40,7 +40,13 @@ public class UserFrontController extends HttpServlet {
 			} catch (Exception e) {
 				System.out.println("usercontroller error"+e);
 			}
-		}else {
+		}else if (command.equals("/userController/UserCheckId.User")) {
+			try {
+				forward = new UserCheckIdAction().execute(request, response);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+		}else{
 			forward = new ActionForward();
 			forward.setPath("/app/error/404.jsp");
 			forward.setRedirect(false);
