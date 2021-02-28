@@ -28,8 +28,9 @@ public class UserDAO {
 		return null;// cookie == DB삽입 실패
 	}
 	
-	public boolean idCheck(UserBean userid) {
-		return 0==(Integer)sqlsession.selectOne("UserBean.getUserid");
+	public int checkid(String userid) {
+		int result = (Integer)sqlsession.selectOne(userid); 
+		return result; 
 	}
 //	public boolean login(String userid,String userpw) {
 //	}

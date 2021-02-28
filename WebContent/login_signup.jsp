@@ -8,22 +8,15 @@
 <link rel = "stylesheet" href="/app/css/loginsignup.css">
 </head>
 <body>
-
 	<div class = slidepage>
-                
                 <input type="radio" name = "trans" id= "move2page">
                 <input type="radio" name = "trans" id= "move1page"checked>
-
                     <div class = slider>
-
                         <div class = slide1>
-
                             <div class =slide1in-1>
-
                                 <div class = label1hw>
                                     <label for="move2page"><img id ="signupimg" src="/app/login_signupimages/signupimg.png" alt=""></label>
-                                </div>   
-
+                                </div>
                                 <div class = "loginbox">
                                     <h1> LOGIN </h1>
                                     <form name= "login" action = "login_action.jsp" method="post">
@@ -45,9 +38,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
                         <div class = slide2>
                             <div class =slide2in>
                                 <div class = label2hw>
@@ -55,12 +45,13 @@
                                 </div>
                                 <div class = "signupbox">
                                     <h1>SIGN UP</h1>
-                                    
                                     <!-- -----------------------signupform--------------------- -->
                                     <form name = "joinform" action="/userController/UserJoinCheck.User" method="post">
                                         <div class = "int-a">
-                                            <input type = "text" name = "userid" id = "sign_id">
+                                        	<span style = "color : red" id = checkIdResultSpan></span>
+                                            <input type = "text" onkeyup="checkId();" name = "userid" id = "sign_id">
                                             <label for="id">STUDENT ID</label>
+                                            <!-- <button type = "button" >중복확인</button> -->
                                         </div> 
                                        
                                         <div class = "int-a">
@@ -89,7 +80,5 @@
                     </div>
             </div>
 </body>
-
 <script src="<%=request.getContextPath()%>/app/js/login_signup.js"></script>
-
 </html>
