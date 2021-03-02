@@ -15,8 +15,8 @@
 		select count(*) from boarduser where userid = #{userid}
 	</select>
 	
-	<select id = "login" parameterType="hashmap" resultType = "_int">
-		select count(*) from board where userid = #{userid} and userpw = #{userpw}
+	<select id = "login" parameterType="userBean" resultType = "_int">
+		select count(*) from boardUSER where userid = #{userid} and userpw = #{userpw}
 	</select>
 
 </mapper>

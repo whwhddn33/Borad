@@ -34,6 +34,7 @@ public class UserFrontController extends HttpServlet {
 		System.out.println("command substring 확인 : "+ requestURI.substring(contextPath.length()));
 		
 		ActionForward forward = null;
+		
 		if (command.equals("/userController/UserJoinCheck.User")) {
 			try {
 				forward = new UserJoinCheckAction().execute(request,response);
@@ -46,7 +47,15 @@ public class UserFrontController extends HttpServlet {
 			} catch (Exception e) {
 				System.out.println(e);
 			}
+		}else if (command.equals("/userController/UserLogin.User")) {
+			try {
+				System.out.println("userLogin컨트롤러 진입");
+				forward = new UserLoginAction().execute(request, response);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
 		}else{
+			System.out.println("컨트롤러 진입실패");
 			forward = new ActionForward();
 			forward.setPath("/app/error/404.jsp");
 			forward.setRedirect(false);

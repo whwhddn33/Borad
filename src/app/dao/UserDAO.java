@@ -2,6 +2,7 @@ package app.dao;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import javax.websocket.Session;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -18,7 +19,6 @@ public class UserDAO {
 	
 	
 	public Cookie join(UserBean user,HttpServletResponse response) {
-//		sqlsession.insert("User.join",user);
 		if(sqlsession.insert("User.join",user) > 0){
 			Cookie cookie = new Cookie("joinid", user.getUserid());
 			cookie.setPath("/");
@@ -32,8 +32,23 @@ public class UserDAO {
 		System.out.println("checkId boolean 확인 : "+(Integer)sqlsession.selectOne("User.checkId",userid));
 		return 0==(Integer)sqlsession.selectOne("User.checkId",userid);
 	}
-//	public boolean login(String userid,String userpw) {
-//	}
+
+
+	public Cookie login(UserBean user, HttpServletResponse response) {
+		System.out.println("로그인메서드 진입");
+		if((Integer)sqlsession.selectOne("User.login",user) == 1) {
+			Cookie c = new Cookie("loginid", user.getUserid());
+			response.addCookie(c);
+			return c;
+		}
+		return null;
+	}
+
+
+
+
+
+
 }
 
 

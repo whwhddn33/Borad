@@ -26,7 +26,7 @@
 
                                 <div class = "loginbox">
                                     <h1> LOGIN </h1>
-                                    <form name= "login" action = "login_action.jsp" method="post">
+                                    <form name= "login" action = "/userController/UserLogin.User" method="post">
                                         <div class = "logint-area">
                                             <input type="text" name= "id" id = "id"
                                             autocomplete = "off" required>
@@ -59,11 +59,10 @@
                                     <!-- -----------------------signupform--------------------- -->
                                     <form name = "joinform" action="/userController/UserJoinCheck.User" method="post">
                                         <div class = "int-a" >
-                                            <input type = "text"  name = "userid" id = "sign_id"  oninput="checkId();">
-                                            <label for="id">STUDENT ID<span id = checkText style ="color: red"> <!-- <button type="button" onclick="checkId()"> 중복체크</button> --></span></label>
-                                            
-                                        </div> 
-                                       
+                                            <input type = "text"  name = "userid" id = "sign_id"  oninput = "checkId();" onkeyup="checkId();">
+                                            <label for="id">STUDENT ID<span id = checkText style ="color: red"></span></label>
+                                        </div>
+                                        
                                         <div class = "int-a">
                                             <input type="password" name= "userpw" id = "sign_password">
                                             <label for="password">PASSWORD</label>
@@ -72,6 +71,9 @@
                                             <input type="password" name= "userpwCheck" id = "sign_password_ck">
                                             <label for="password_ck">PASSWORD CHECK</label>
                                         </div>
+                                        
+                                        
+                                        
                                         <div class = "int-a">
                                             <input type = "text" name = "username" id = "sign_name">
                                             <label for="name">NAME</label>
