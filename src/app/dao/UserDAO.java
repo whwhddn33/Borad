@@ -1,11 +1,15 @@
 package app.dao;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
-import javax.websocket.Session;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
 import mybatis.config.SqlMapConfig;
 
@@ -28,9 +32,13 @@ public class UserDAO {
 		return null;// cookie == DB삽입 실패
 	}
 	
-	public boolean checkId(String userid) {
-		System.out.println("checkId boolean 확인 : "+(Integer)sqlsession.selectOne("User.checkId",userid));
-		return 0==(Integer)sqlsession.selectOne("User.checkId",userid);
+	public List<String> checkId() {
+		System.out.println("List<String> checkId() 진입");
+		List<String> idList = sqlsession.selectList("User.checkId");
+		System.out.println(idList);
+		return idList;
+		
+		
 	}
 
 
@@ -43,12 +51,6 @@ public class UserDAO {
 		}
 		return null;
 	}
-
-
-
-
-
-
 }
 
 

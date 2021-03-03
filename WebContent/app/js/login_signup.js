@@ -25,8 +25,29 @@ function signCheck(){
 			return false;
 		}else joinform.submit();
 }
-
 function checkId() {
+	const useridTag = document.joinform.userid;
+	const userid = useridTag.value;//apple
+	const checkText = document.getElementById("checkText");
+
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "/userController/UserCheckId.User", true);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		xhr.send("userid="+userid);
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200 || xhr.status == 201) {
+				if (xhr.responseText.trim() == "ok") {
+					checkText.style.color = "green";
+					checkText.innerHTML = "사용할 수 있는 아이디입니다.";
+				} else {
+					checkText.style.color = "red";
+					checkText.innerHTML = "중복된 아이디입니다.";
+				}
+			}
+		}
+}
+
+/*function checkId() {
 	const useridTag = document.joinform.userid;
 	const userid = useridTag.value;//apple
 	const checkText = document.getElementById("checkText");
@@ -51,4 +72,4 @@ function checkId() {
 		
 
 	}
-}
+}*/

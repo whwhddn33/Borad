@@ -1,9 +1,12 @@
 package app.userController;
 
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import action.Action;
 import action.ActionForward;
@@ -15,15 +18,10 @@ public class UserCheckIdAction implements Action{
 		request.setCharacterEncoding("UTF-8");
 		UserDAO udao = new UserDAO();
 		
-		String userid = request.getParameter("userid");
-		System.out.println("UsercheckId Action userid : "+userid);
-		PrintWriter out = response.getWriter();
-		if (udao.checkId(userid)) {
-			out.println("ok");
-		}else {
-			out.println("not-ok");
-  		}
+		System.out.println(udao.checkId());
+		HttpSession session = request.getSession();
+		session.setAttribute("idList", udao.checkId());
+		System.out.println(session.getAttribute("idList"));
 		return null;
 	}
-
 }

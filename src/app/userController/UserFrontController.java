@@ -43,6 +43,7 @@ public class UserFrontController extends HttpServlet {
 			}
 		}else if (command.equals("/userController/UserCheckId.User")) {
 			try {
+				System.out.println("}else if (command.equals(\"/userController/UserCheckId.User\")) { 진입");
 				forward = new UserCheckIdAction().execute(request, response);
 			} catch (Exception e) {
 				System.out.println(e);
