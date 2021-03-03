@@ -31,7 +31,7 @@ public class UserLoginAction implements Action{
 			session.setAttribute("loginpw", uBean.getUserpw());
 			System.out.println(session.getAttribute("loginpw"));
 			forward.setRedirect(true);
-			forward.setPath("/main.html");
+			forward.setPath("/main.jsp");
 		}
 		return forward;
 	}

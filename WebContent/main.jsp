@@ -1,16 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>SMUCLUB</title>
-    <link rel="stylesheet" href="/app/css/main.css">
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="/app/css/main.css">
 </head>
+
 <body>
+<div class="logout-wrapper">
+            <div class="btn"><a class="btn blue" href="/login/logout.php">로그아웃</a></div>       
+       </div>
+    <div class ="text-wrapper">   
+       <div class="text"><a class="btn blue" >${loginid}님</a></div>
+    </div>
+    <br><br>
+
 
     <div class = "wrapper">
             <a href="#" class="logo">
-            <img class="logo" src="/app/main_images/logo.png">
+            	<img class="logo" src="/app/main_images/logo.png">
             </a>
+    
+            
                     
                     <input type="radio" name= "radiobtn" id= "books">
                     <label class = "book" name= "radiobtn"for="books">
@@ -86,5 +101,5 @@
             
         
     </div>
-
 </body>
+</html>
