@@ -93,13 +93,12 @@
                     </div>
                     <div class = "list5">
                         <li>
-                            5
-                            <a href="https://www.youtube.com/watch?v=6-q68eYvzyE">아마테라스</a>
-                            <a href="https://www.youtube.com/watch?v=FSn_3I9yMJU">나셍강</a>
                         </li>
                     </div>
+                    
             
         
     </div>
 </body>
+
 </html>

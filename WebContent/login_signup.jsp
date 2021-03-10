@@ -15,15 +15,11 @@
                 <input type="radio" name = "trans" id= "move1page"checked>
 
                     <div class = slider>
-
                         <div class = slide1>
-
                             <div class =slide1in-1>
-
                                 <div class = label1hw>
                                     <label for="move2page"><img id ="signupimg" src="/app/login_signupimages/signupimg.png" alt=""></label>
                                 </div>   
-
                                 <div class = "loginbox">
                                     <h1> LOGIN </h1>
                                     <form name= "login" action = "/userController/UserLogin.User" method="post">
@@ -45,8 +41,6 @@
                                 </div>
                             </div>
                         </div>
-
-
 
                         <div class = slide2>
                             <div class =slide2in>
